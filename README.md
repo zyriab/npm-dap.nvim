@@ -1,2 +1,2 @@
 # npm-debug.nvim
-Run your NPM scripts from the debugger dialog
+Run your npm scripts from the debugger dialog
