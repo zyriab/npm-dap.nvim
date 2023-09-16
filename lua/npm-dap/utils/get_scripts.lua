@@ -1,4 +1,4 @@
-local table_utils = require("dap-npm.utils.table")
+local table_utils = require("npm-dap.utils.table")
 local is_table_empty = table_utils.is_table_empty
 local get_keys = table_utils.get_keys
 

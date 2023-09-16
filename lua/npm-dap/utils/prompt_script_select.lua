@@ -1,4 +1,4 @@
-local get_scripts = require("dap-npm.utils.get_scripts")
+local get_scripts = require("npm-dap.utils.get_scripts")
 
 return function()
     return coroutine.create(function(coro)

@@ -1,14 +1,8 @@
 local found, dap           = pcall(require, "dap")
-local prompt_script_select = require("dap-npm.utils.prompt_script_select")
-local is_dap_setup         = require("dap-npm.utils.is_dap_setup")
+local prompt_script_select = require("npm-dap.utils.prompt_script_select")
+local is_dap_setup         = require("npm-dap.utils.is_dap_setup")
 
-local M                    = {
-    setup = function()
-        vim.notify(
-            "dap-npm could not find nvim-dap, make sure it is installed and that you setup this plugin after nvim-dap.",
-            vim.log.levels.ERROR)
-    end
-}
+local M                    = {}
 
 if found and is_dap_setup() then
     M.setup = function(opts)
@@ -38,8 +32,5 @@ if found and is_dap_setup() then
         end
     end
 end
-
-M.setup()
-
 
 return M
