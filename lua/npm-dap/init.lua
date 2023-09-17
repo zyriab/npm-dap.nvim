@@ -25,9 +25,11 @@ if found then
                     type = "pwa-node",
                     request = "launch",
                     cwd = "${workspaceFolder}",
-                    -- FIXME: debug the weird sourcemaps jumps
-                    -- outFiles = { "${workspaceFolder}/dist/**/*.js" },
-                    runtimeExecutable = "npm",
+                    rootPath = "${workspaceFolder}",
+                    sourceMaps = true,
+                    skilpFiles = { "<node_internals>/**" },
+                    protocol = "inspector",
+                    console = "integratedTerminal",
                     runtimeArgs = {
                         "run-script",
                         prompt_script_select
@@ -45,6 +47,11 @@ if found then
                         type = "pwa-node",
                         request = "launch",
                         cwd = "${workspaceFolder}",
+                        rootPath = "${workspaceFolder}",
+                        sourceMaps = true,
+                        skilpFiles = { "<node_internals>/**" },
+                        protocol = "inspector",
+                        console = "integratedTerminal",
                         runtimeExecutable = "npm",
                         runtimeArgs = {
                             "run-script",
