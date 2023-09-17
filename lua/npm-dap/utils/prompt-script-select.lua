@@ -1,4 +1,5 @@
-local get_scripts = require("npm-dap.utils.get_scripts")
+local get_scripts = require("npm-dap.utils.get-scripts")
+local config_manager = require("npm-dap.utils.config-manager")
 
 return function()
     return coroutine.create(function(coro)
@@ -11,6 +12,10 @@ return function()
                 end
             },
             function(selection)
+                if selection ~= nil then
+                    config_manager.save_script(selection)
+                end
+
                 coroutine.resume(coro, selection)
             end)
         return true
