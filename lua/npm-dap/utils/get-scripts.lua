@@ -3,7 +3,7 @@ local is_table_empty = table_utils.is_table_empty
 local get_keys = table_utils.get_keys
 
 return function()
-    local path = vim.fs.find("package.json", { type = "file" })
+    local path = vim.fs.find("package.json", { type = "file", upward = true })
 
     if is_table_empty(path) then
         return {}
