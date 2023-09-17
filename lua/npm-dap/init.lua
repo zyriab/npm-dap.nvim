@@ -30,6 +30,9 @@ if found then
                     skilpFiles = { "<node_internals>/**" },
                     protocol = "inspector",
                     console = "integratedTerminal",
+                    runtimeExecutable = "npm",
+                    -- TODO: find a way to abort
+                    -- if prompt_script_select returns nil
                     runtimeArgs = {
                         "run-script",
                         prompt_script_select
@@ -37,7 +40,7 @@ if found then
                 }
             )
 
-            -- TODO: reload this everytime the user opens the debugger select
+            -- TODO: find a way to refresh the dap ui.select contents
             for _, script in ipairs(config_manager.get_scripts()) do
                 table.insert(
                     dap.configurations[language],
