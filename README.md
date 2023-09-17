@@ -5,6 +5,7 @@ Run your npm scripts from the debugger dialog
 
 ## TODO
 - [x] Save already selected scripts and show them next time
-- [ ] Add tests
-- [ ] Debug the sourcemaps jumps/messages (`outFiles`)
 - [ ] Kill process on session end
+- [ ] Debug the sourcemaps jumps/messages (`outFiles`)
+- [ ] Prevent debugger from starting if no script was chosen
+- [ ] Add tests (͠≖ ͜ʖ͠≖)
