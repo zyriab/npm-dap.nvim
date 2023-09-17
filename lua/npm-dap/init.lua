@@ -2,9 +2,13 @@ local found, dap           = pcall(require, "dap")
 local prompt_script_select = require("npm-dap.utils.prompt_script_select")
 local is_dap_setup         = require("npm-dap.utils.is_dap_setup")
 
-local M                    = {}
+local M                    = {
+    setup = function()
+        vim.notify("could not setup npm-dap, no installation of dap could be found", vim.log.levels.ERROR)
+    end
+}
 
-if found and is_dap_setup() then
+if found then
     M.setup = function(opts)
         for _, language in ipairs({ "typescript", "javascript", "typescriptreact", "javascriptreact" }) do
             if dap.configurations[language] == nil then
