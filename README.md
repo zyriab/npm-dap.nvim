@@ -1,7 +1,7 @@
 # npm-dap.nvim
 Run your npm scripts from the debugger dialog
 
-**🚧 Work in progress 🚧**
+🚧 **Work in progress** 🚧
 
 ## How to use 
 Simply call the `setup` function somewhere after your DAP's JS/TS configurations.
