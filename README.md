@@ -1,5 +1,6 @@
 # npm-dap.nvim
 Run your npm scripts from the debugger dialog
+
 **Work in progress**
 
 ## How to use 
